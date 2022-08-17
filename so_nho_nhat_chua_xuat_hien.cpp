@@ -14,6 +14,7 @@ ll t, n;
 ll a[1000001];
 vector<ll> v;
 bitset<(ll)1e3+1> nt;
+unordered_map<ll,ll> m;
 
 void Sieve(ll n)
 {
@@ -38,14 +39,22 @@ int main()
     cin >> t;
     while(t--)
 	{
-		ll res = 1e9;
 		cin >> n;
-		FOR(i,1,n,1) cin >> a[i];
+		FOR(i,1,n,1) 
+		{
+			cin >> a[i];
+			m[a[i]] = 1;
+		}
 
-		sort(a+1,a+1+n);
-		FOR(i,1,n-1,1) res = min(res, a[i+1] - a[i]);
+		
+		FOR(i,1,1e6,1) if(m[i] == 0) 
+		{
+			cout << i << '\n';
+			break;
+		} 
 
-		cout << res << '\n';
+		m.clear();
+
 	}
     
 	return 0;
