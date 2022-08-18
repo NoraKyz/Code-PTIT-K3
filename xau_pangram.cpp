@@ -10,41 +10,35 @@
 using namespace std;
 const ll MOD=1e9+7;
 
-ll t, n, d;
-ll a[100001];
-vector<ll> v;
-bitset<(ll)1e3+1> nt;
+ll t, k;
+string s;
 
-void Sieve(ll n)
+bool check(string s, ll k)
 {
-	nt.set(2);
-	v.pb(2);
-	FOR(i,3,n,2) nt.set(i);
-	
-	FOR(i,3,n,2)
-	{
-		if(nt[i]) 
-		{
-			v.pb(i);
-			FOR(j,i*3,n,i*2) nt.reset(j);
-		}
-	}
-}
+    ll a[200] = {0}, c = 0, du = 0;
+    for(auto x : s) 
+    {
+        a[x] ++;
+        if(a[x] > 1) du++;
+    }
+    
+    FOR(i,'a','z',1) if(a[i] == 0) c++;
 
+    if(c > k || du < c) return 0;
+    return 1;
+}
 
 int main()
 {   
     
     cin >> t;
+
     while(t--)
 	{
-		cin >> n >> d;
-		FOR(i,0,n-1,1) cin >> a[i];
-
-		FOR(i,d,n-1,1) cout << a[i] << " ";
-		FOR(i,0,d-1,1) cout << a[i] << " ";
-		cout << '\n';
+		cin >> s >> k;
+        cout << check(s, k) << '\n';     
 	}
     
 	return 0;
 }
+ 

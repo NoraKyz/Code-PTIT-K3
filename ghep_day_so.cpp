@@ -10,27 +10,8 @@
 using namespace std;
 const ll MOD=1e9+7;
 
-ll t, n, d;
-ll a[100001];
+ll t, n, k, x;
 vector<ll> v;
-bitset<(ll)1e3+1> nt;
-
-void Sieve(ll n)
-{
-	nt.set(2);
-	v.pb(2);
-	FOR(i,3,n,2) nt.set(i);
-	
-	FOR(i,3,n,2)
-	{
-		if(nt[i]) 
-		{
-			v.pb(i);
-			FOR(j,i*3,n,i*2) nt.reset(j);
-		}
-	}
-}
-
 
 int main()
 {   
@@ -38,12 +19,18 @@ int main()
     cin >> t;
     while(t--)
 	{
-		cin >> n >> d;
-		FOR(i,0,n-1,1) cin >> a[i];
+		cin >> k >> n;
+		FOR(i,1,k*n,1) 
+		{
+			cin >> x;
+			v.pb(x);
+		}
 
-		FOR(i,d,n-1,1) cout << a[i] << " ";
-		FOR(i,0,d-1,1) cout << a[i] << " ";
+		sort(all(v));
+		for(auto x : v) cout << x << " ";
 		cout << '\n';
+
+		v.clear();
 	}
     
 	return 0;

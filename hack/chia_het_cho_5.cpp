@@ -10,41 +10,41 @@
 using namespace std;
 const ll MOD=1e9+7;
 
-ll t, n, d;
-ll a[100001];
-vector<ll> v;
-bitset<(ll)1e3+1> nt;
+ll t;
+string s;
 
-void Sieve(ll n)
+ll ModuleMu(ll n)
 {
-	nt.set(2);
-	v.pb(2);
-	FOR(i,3,n,2) nt.set(i);
-	
-	FOR(i,3,n,2)
-	{
-		if(nt[i]) 
-		{
-			v.pb(i);
-			FOR(j,i*3,n,i*2) nt.reset(j);
-		}
-	}
+    ll res = 1;
+    if(n == 0) return res;
+    n = n%4;
+
+    FOR(i,1,n,1) res*= 2;
+    return res;
 }
 
+string Check(string s)
+{
+    ll res = 0;
+    reverse(all(s));
+    ll n = s.size();
+    FOR(i,0,n-1,1) if(s[i] == '1') res += ModuleMu(i);
+
+    if(res%5 == 0) return "Yes";
+    return "No";
+}
 
 int main()
 {   
     
     cin >> t;
+    cin.ignore();
     while(t--)
 	{
-		cin >> n >> d;
-		FOR(i,0,n-1,1) cin >> a[i];
-
-		FOR(i,d,n-1,1) cout << a[i] << " ";
-		FOR(i,0,d-1,1) cout << a[i] << " ";
-		cout << '\n';
+		cin >> s;
+        cout << Check(s) << '\n';  
 	}
     
 	return 0;
 }
+ 

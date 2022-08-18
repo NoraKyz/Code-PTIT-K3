@@ -10,8 +10,8 @@
 using namespace std;
 const ll MOD=1e9+7;
 
-ll t, n, d;
-ll a[100001];
+ll t, n;
+ll a[1000001];
 vector<ll> v;
 bitset<(ll)1e3+1> nt;
 
@@ -38,12 +38,14 @@ int main()
     cin >> t;
     while(t--)
 	{
-		cin >> n >> d;
-		FOR(i,0,n-1,1) cin >> a[i];
+		ll res = 1e9;
+		cin >> n;
+		FOR(i,1,n,1) cin >> a[i];
 
-		FOR(i,d,n-1,1) cout << a[i] << " ";
-		FOR(i,0,d-1,1) cout << a[i] << " ";
-		cout << '\n';
+		sort(a+1,a+1+n);
+		FOR(i,1,n-1,1) res = min(res, a[i+1] - a[i]);
+
+		cout << res << '\n';
 	}
     
 	return 0;

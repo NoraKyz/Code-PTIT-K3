@@ -39,12 +39,11 @@ int main()
     while(t--)
 	{
 		cin >> n >> d;
-		FOR(i,0,n-1,1) cin >> a[i];
-
-		FOR(i,d,n-1,1) cout << a[i] << " ";
-		FOR(i,0,d-1,1) cout << a[i] << " ";
-		cout << '\n';
+		FOR(i,1,n,1) cin >> a[i];
+		sort(a+1,a+1+n);
+		cout << a[d] << '\n';
 	}
     
 	return 0;
 }
+ 

@@ -1,0 +1,1 @@
+{"name":"Local: so_0_o_cuoi_day","url":"f:\\Code-PTIT-K3\\so_0_o_cuoi_day.cpp","tests":[{"id":1660840265834,"input":"2\n7\n1  2 0  0  0  3  6\n6\n0  1  0  2  0  3","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Code-PTIT-K3\\so_0_o_cuoi_day.cpp","group":"local","local":true}
