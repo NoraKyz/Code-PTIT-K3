@@ -1,0 +1,1 @@
+{"name":"Local: tron_hai_day_va_sap_xep","url":"f:\\Tài nguyên Code\\Code-PTIT-K3\\hack\\tron_hai_day_va_sap_xep.cpp","tests":[{"id":1660875863124,"input":"1\n3 3\n10 5 15\n20 3 2","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Tài nguyên Code\\Code-PTIT-K3\\hack\\tron_hai_day_va_sap_xep.cpp","group":"local","local":true}
