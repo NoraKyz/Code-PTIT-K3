@@ -34,17 +34,10 @@ string Check(string s)
     return "No";
 }
 
-int main()
-{   
-    
-    cin >> t;
-    cin.ignore();
-    while(t--)
-	{
-		cin >> s;
-        cout << Check(s) << '\n';  
-	}
-    
-	return 0;
+int main(){
+    struct ThiSinh A;
+    nhap(A);
+    in(A);
+    return 0;
 }
  
