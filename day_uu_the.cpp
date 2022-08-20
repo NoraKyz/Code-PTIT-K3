@@ -10,29 +10,7 @@
 using namespace std;
 const ll MOD=1e9+7;
 
-ll t;
-string s;
-
-ll ModuleMu(ll n)
-{
-    ll res = 1;
-    if(n == 0) return res;
-    n = n%4;
-
-    FOR(i,1,n,1) res*= 2;
-    return res;
-}
-
-string Check(string s)
-{
-    ll res = 0;
-    reverse(all(s));
-    ll n = s.size();
-    FOR(i,0,n-1,1) if(s[i] == '1') res += ModuleMu(i);
-
-    if(res%5 == 0) return "Yes";
-    return "No";
-}
+ll t, x;
 
 int main()
 {   
@@ -41,8 +19,21 @@ int main()
     cin.ignore();
     while(t--)
 	{
-		cin >> s;
-        cout << Check(s) << '\n';  
+		ll c = 0, l = 0;
+        char k = 'a';
+
+        while(k != '\n' && k != EOF)
+        {
+            cin >> x;
+            c++;
+            l += x%2;
+            k = getchar();
+        } 
+
+        if((c%2 == 1 && 2*l > c) || (c%2 == 0 && 2*l < c)) cout << "YES";
+        else cout << "NO";
+
+        cout << '\n';
 	}
     
 	return 0;
