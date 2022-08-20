@@ -11,29 +11,26 @@ using namespace std;
 const ll MOD=1e9+7;
 
 ll t;
-struct ThiSinh
-{
-    string name, birth;
-    double m1, m2, m3;
-};
+string s;
 
-void nhap(ThiSinh &A)
-{
-    getline(cin, A.name);
-    cin >> A.birth >> A.m1 >> A.m2 >> A.m3;
-}
+int main()
+{   
+	cin >> s;
+	for(auto &x : s) if(x >= 'A' && x <= 'Z') x+=32;
 
-void in(ThiSinh A)
-{
-    cout << A.name << " " << A.birth << " ";
-    cout << fixed << setprecision(1) << (A.m1 + A.m2 + A.m3);
-}
+	for(auto x : s) 
+	{
+		if(x == 'u' || x =='e' || x=='o' || x=='a' || x=='i' || x=='y')
+		{
 
-
-int main(){
-    struct ThiSinh A;
-    nhap(A);
-    in(A);
-    return 0;
+		}
+		else 
+		{
+			cout << "." << x;
+		}
+	}
+    
+    
+	return 0;
 }
  

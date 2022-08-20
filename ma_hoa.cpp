@@ -11,13 +11,31 @@ using namespace std;
 const ll MOD=1e9+7;
 
 ll t;
+string s;
+unordered_map<char,ll> m;
 
 int main()
 {   
     cin >> t;
     while(t--)
-    {
+    {       
+        cin >> s;
+        char tmp = s[0];
+        for(auto x : s)
+        {
+            if(x == tmp) m[x]++;
+            else 
+            {
+                m[x]++;
+                cout << tmp << m[tmp];
+                m[tmp] = 0;
+                tmp = x;
+            } 
+        }
 
+        cout << tmp << m[tmp] << '\n';
+
+        m.clear();
     }
     
     

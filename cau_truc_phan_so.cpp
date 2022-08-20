@@ -11,29 +11,33 @@ using namespace std;
 const ll MOD=1e9+7;
 
 ll t;
-struct ThiSinh
+struct PhanSo
 {
-    string name, birth;
-    double m1, m2, m3;
+    ll t, m;
 };
 
-void nhap(ThiSinh &A)
+void nhap(PhanSo &A)
 {
-    getline(cin, A.name);
-    cin >> A.birth >> A.m1 >> A.m2 >> A.m3;
+    cin >> A.t >> A.m;
 }
 
-void in(ThiSinh A)
+void in(PhanSo &A)
 {
-    cout << A.name << " " << A.birth << " ";
-    cout << fixed << setprecision(1) << (A.m1 + A.m2 + A.m3);
+    cout << A.t << '/' << A.m;
 }
 
+void rutgon(PhanSo &A)
+{
+    ll res = __gcd(A.t, A.m);
+    A.t /= res;
+    A.m /= res;
+}
 
-int main(){
-    struct ThiSinh A;
-    nhap(A);
-    in(A);
-    return 0;
+int main() {
+	struct PhanSo p;
+	nhap(p);
+	rutgon(p);
+	in(p);
+	return 0;
 }
  

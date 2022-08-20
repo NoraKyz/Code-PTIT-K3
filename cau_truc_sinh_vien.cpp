@@ -11,29 +11,30 @@ using namespace std;
 const ll MOD=1e9+7;
 
 ll t;
-struct ThiSinh
+struct SinhVien
 {
-    string name, birth;
-    double m1, m2, m3;
+    string name, birth, classroom;
+    double point;
 };
 
-void nhap(ThiSinh &A)
+void nhap(SinhVien &A)
 {
     getline(cin, A.name);
-    cin >> A.birth >> A.m1 >> A.m2 >> A.m3;
+    cin >> A.classroom >> A.birth >> A.point;
 }
 
-void in(ThiSinh A)
+void in(SinhVien A)
 {
-    cout << A.name << " " << A.birth << " ";
-    cout << fixed << setprecision(1) << (A.m1 + A.m2 + A.m3);
+    cout << "B20DCCN001" << " ";
+    cout << A.name << " " << A.classroom << " " << A.birth << " ";
+    cout << fixed << setprecision(2) << A.point;
 }
 
 
 int main(){
-    struct ThiSinh A;
-    nhap(A);
-    in(A);
+    struct SinhVien a;
+    nhap(a);
+    in(a);
     return 0;
 }
  
