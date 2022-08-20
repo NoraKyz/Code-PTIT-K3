@@ -1,0 +1,1 @@
+{"name":"Local: day_uu_the","url":"f:\\Tài nguyên Code\\Code-PTIT-K3\\day_uu_the.cpp","tests":[{"id":1660955195502,"input":"2\n11 22 33 44 55 66 77\n23 34 45 56 67 78 89 90 121 131 141 151 161 171","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Tài nguyên Code\\Code-PTIT-K3\\day_uu_the.cpp","group":"local","local":true}
