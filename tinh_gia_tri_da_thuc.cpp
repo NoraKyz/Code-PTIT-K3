@@ -29,7 +29,7 @@ int main()
     {
         ll res = 0;
         cin >> n >> x;
-        FORD(i,n-1,0,1) 
+        FOR(i,0,n-1,1) 
         {
             cin >> a;
             res += ((a%MOD) * ModulePow(x,i))%MOD;

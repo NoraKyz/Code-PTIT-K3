@@ -27,13 +27,13 @@ int main()
         for(auto &x : s12) if(x == '5') x = '6';
         for(auto &x : s22) if(x == '5') x = '6';
 
-        a = stol(s11, nullptr, 10);
-        b = stol(s21, nullptr, 10);
+        a = stoll(s11, nullptr, 10);
+        b = stoll(s21, nullptr, 10);
 
         cout << a + b << " ";
 
-        a = stol(s12, nullptr, 10);
-        b = stol(s22, nullptr, 10);
+        a = stoll(s12, nullptr, 10);
+        b = stoll(s22, nullptr, 10);
 
         cout << a + b << '\n';
     }

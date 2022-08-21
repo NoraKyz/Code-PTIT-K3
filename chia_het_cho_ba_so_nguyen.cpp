@@ -18,13 +18,13 @@ ll Logic(ll x, ll y, ll z, ll n)
     res = res*z / __gcd(res, z);
     if((int) log10(res) + 1 > n) return -1;
 
-    ll i = 0;
+    ll i =(ll) (pow(10,n-1) / res) * res;
     while(1) 
     {
         i+=res;
         if((int) log10(i) + 1 == n) return i;
     }
-    return res;
+    return i;
 }
 
 int main()

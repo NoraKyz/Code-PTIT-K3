@@ -23,15 +23,20 @@ int main()
         cin >> n >> m;
         FOR(i,1,n,1)
         {
-            FOR(j,1,m,1) cin >> a[i][j];
+            FOR(j,1,m,1) 
+            {
+                cin >> a[i][j];
+                res[i][j] = 1e9;
+            }
         }
+
 
         ll i = 1, j = 1;
         FOR(k,1,n*m,1)
         {
             res[i][j] = a[i][j];
             cout << a[i][j] << " ";
-            if(i + d.front().first <= n && i + d.front().first >= 1 && j + d.front().second <= m && j + d.front().second >= 1 && res[i + d.front().first][j + d.front().second] == 0)
+            if(i + d.front().first <= n && i + d.front().first >= 1 && j + d.front().second <= m && j + d.front().second >= 1 && res[i + d.front().first][j + d.front().second] == 1e9)
             {
                 i += d.front().first;
                 j += d.front().second;

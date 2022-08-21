@@ -26,11 +26,14 @@ int main()
             cin >> x;
             fa[i] = fa[i-1] + x;
         }
+        res = max(res, fa[n]);
+
         FOR(i,1,m,1) 
         {
             cin >> x;
             fb[i] = fb[i-1] + x;
         }
+        res = max(res, fb[m]);
 
         FOR(i,1,n,1) 
         {

@@ -20,7 +20,7 @@ struct SinhVien
     double point;
 };
 
-void nhapThongTinSV(SinhVien &A)
+void nhap(SinhVien &A)
 {
     getline(cin, A.name);
     cin >> A.classroom >> A.birth >> A.point;
@@ -34,7 +34,7 @@ void chuanhoangay(SinhVien &A)
         A.birth.insert(3, "0");
 }
 
-void inThongTinSV(SinhVien A)
+void in(SinhVien A)
 {
     chuanhoangay(A);
     cout << "N20DCCN001"
@@ -43,10 +43,9 @@ void inThongTinSV(SinhVien A)
     cout << fixed << setprecision(2) << A.point;
 }
 
-int main()
-{
+int main(){
     struct SinhVien a;
-    nhapThongTinSV(a);
-    inThongTinSV(a);
+    nhap(a);
+    in(a);
     return 0;
 }
