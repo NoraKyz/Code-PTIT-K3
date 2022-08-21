@@ -10,31 +10,31 @@
 using namespace std;
 const ll MOD=1e9+7;
 
-ll t, n, x;
-unordered_map<ll,bool> m;
+ll t, n;
+
+ll Prime(ll n)
+{
+    if(n < 2) return 0;
+    FOR(i,2,sqrt(n),1) if(n%i == 0) return 0;
+    return 1; 
+}
+
+ll Check(ll n)
+{
+    ll res = 0;
+    FOR(i,1,n,1) res += (__gcd(i,n) == 1);
+    return Prime(res);
+}
 
 int main()
 {   
-    
     cin >> t;
-    cin.ignore();
     while(t--)
-	{
-		cin >> n;
-        FOR(i,1,n-1,1) 
-        {
-            cin >> x;
-            m[x] = 1;
-        }
-
-        FOR(i,1,n,1) if(m[i] == 0) 
-        {
-            cout << i << '\n';
-            break;
-        }
-
-        m.clear();
-	}
+    {
+        cin >> n;
+        cout << Check(n) << '\n';
+    }
+    
     
 	return 0;
 }

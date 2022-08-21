@@ -10,31 +10,32 @@
 using namespace std;
 const ll MOD=1e9+7;
 
-ll t, n, x;
-unordered_map<ll,bool> m;
+ll t, x , y, z, n;
+
+ll Logic(ll x, ll y, ll z, ll n)
+{
+    ll res = x*y / __gcd(x, y);
+    res = res*z / __gcd(res, z);
+    if((int) log10(res) + 1 > n) return -1;
+
+    ll i = 0;
+    while(1) 
+    {
+        i+=res;
+        if((int) log10(i) + 1 == n) return i;
+    }
+    return res;
+}
 
 int main()
 {   
-    
     cin >> t;
-    cin.ignore();
     while(t--)
-	{
-		cin >> n;
-        FOR(i,1,n-1,1) 
-        {
-            cin >> x;
-            m[x] = 1;
-        }
-
-        FOR(i,1,n,1) if(m[i] == 0) 
-        {
-            cout << i << '\n';
-            break;
-        }
-
-        m.clear();
-	}
+    {
+        cin >> x >> y >> z >> n;
+        cout << Logic(x,y,z,n) << '\n';
+    }
+    
     
 	return 0;
 }

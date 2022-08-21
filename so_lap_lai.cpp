@@ -10,31 +10,19 @@
 using namespace std;
 const ll MOD=1e9+7;
 
-ll t, n, x;
-unordered_map<ll,bool> m;
+ll t, a, x, y;
 
 int main()
 {   
-    
     cin >> t;
-    cin.ignore();
     while(t--)
-	{
-		cin >> n;
-        FOR(i,1,n-1,1) 
-        {
-            cin >> x;
-            m[x] = 1;
-        }
-
-        FOR(i,1,n,1) if(m[i] == 0) 
-        {
-            cout << i << '\n';
-            break;
-        }
-
-        m.clear();
-	}
+    {
+        cin >> a >> x >> y;
+        ll n = __gcd(x,y);
+        FOR(i,1,n,1) cout << a;
+        cout << '\n';
+    }
+    
     
 	return 0;
 }

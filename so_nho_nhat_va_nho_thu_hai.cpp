@@ -36,7 +36,7 @@ int main()
             }
         }
 
-        if(res2 == 1e9) cout << -1;
+        if(res2 == 1e9) cout << -1 << '\n';
         else cout << res1 << " " << res2 << '\n';
 	}
     

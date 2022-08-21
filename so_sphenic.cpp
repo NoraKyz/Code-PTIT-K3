@@ -30,14 +30,17 @@ void Sieve()
 
 bool Check(ll n)
 {
+    unordered_map<ll,ll> m;
+
     ll res = 0;
     while(n != 1)
     {
+        m[f[n]]++;
         n /= f[n];
         res++;
     }
 
-    return res == 3;
+    return (res == 3 && m.size() == 3);
 }
 
 int main()

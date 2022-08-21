@@ -10,7 +10,7 @@
 using namespace std;
 const ll MOD=1e9+7;
 
-ll t;
+ll t, n;
 
 int main()
 {   

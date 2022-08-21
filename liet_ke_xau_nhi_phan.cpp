@@ -10,14 +10,34 @@
 using namespace std;
 const ll MOD=1e9+7;
 
-ll t;
+ll t, n;
+ll x[1000] = {0};
+
+void Print(ll n)
+{
+    FOR(i,1,n,1) cout << x[i];
+    cout << " ";
+}
+
+void Logic(ll i, ll n)
+{
+    FOR(j,0,1,1) 
+    {
+        x[i] = j;
+
+        if(i == n) Print(n);      
+        else if(i < n) Logic(i+1, n);
+    }
+}
 
 int main()
 {   
     cin >> t;
     while(t--)
     {
-
+        cin >> n;
+        Logic(1, n);
+        cout << '\n';
     }
     
     
