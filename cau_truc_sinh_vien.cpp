@@ -34,7 +34,7 @@ void chuanhoangay(SinhVien &A)
 void in(SinhVien A)
 {
     chuanhoangay(A);
-    cout << "N20DCCN001"
+    cout << "B20DCCN001"
          << " ";
     cout << A.name << " " << A.classroom << " " << A.birth << " ";
     cout << fixed << setprecision(2) << A.point;
