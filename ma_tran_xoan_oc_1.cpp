@@ -11,7 +11,6 @@ using namespace std;
 const ll MOD=1e9+7;
 
 ll t, n, m;
-deque<pair<ll,ll>> d = {{0,1}, {1,0}, {0,-1}, {-1,0}};
 ll a[150][150] = {0};
 
 int main()
@@ -19,6 +18,7 @@ int main()
     cin >> t;
     while(t--)
     {
+        deque<pair<ll,ll>> d = {{0,1}, {1,0}, {0,-1}, {-1,0}};
         ll res[150][150] = {0};
         cin >> n >> m;
         FOR(i,1,n,1)

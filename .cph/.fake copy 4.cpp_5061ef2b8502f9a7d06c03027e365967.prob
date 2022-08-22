@@ -1,0 +1,1 @@
+{"name":"Local: fake copy 4","url":"f:\\Tài nguyên Code\\Code-PTIT-K3\\fake copy 4.cpp","tests":[{"id":1661101765904,"input":"2\n4  2\n1  2  0  4\n4  10000\n1 2 3 4","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Tài nguyên Code\\Code-PTIT-K3\\fake copy 4.cpp","group":"local","local":true}

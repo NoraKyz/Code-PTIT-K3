@@ -10,33 +10,38 @@
 using namespace std;
 const ll MOD=1e9+7;
 
-ll t, n, x, a;
-ll ModulePow(ll x, ll y)
-{
-    if (y == 0)
-        return 1;
-    ll res = ModulePow(x, y/2);
-    if (y % 2 == 0)
-        return res * res % MOD;
-    else
-        return (res * res % MOD) * x % MOD;
-}
+ll t, n;
+string s;
 
 int main()
-{
+{   
     cin >> t;
-    while (t--)
+    while(t--)
     {
-        ll res = 0;
-        cin >> n >> x;
-        FOR(i,0,n-1,1) 
+        ll a[500] = {0}, res = 0;
+        cin >> s;
+        for(auto x : s) 
         {
-            cin >> a;
-            res += ((a%MOD) * ModulePow(x,i))%MOD;
+            if(isdigit(x)) res += x - '0';
+            else 
+            {
+                a[x]++;
+            }
+        }
+
+        FOR(i,'A','Z',1) 
+        {
+            while(a[i]--)
+            {
+                cout << (char) i;
+            }
         }
 
         cout << res << '\n';
-    }
 
-    return 0;
+    }
+    
+    
+	return 0;
 }
+ 

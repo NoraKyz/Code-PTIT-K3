@@ -1,0 +1,1 @@
+{"name":"Local: sap_xep_lai_day_con","url":"f:\\Tài nguyên Code\\Code-PTIT-K3\\sap_xep_lai_day_con.cpp","tests":[{"id":1661177185682,"input":"2\n11\n10 12 20 30 25 40 32 31 35 50 60\n9\n0 1 15 25 6 7 30 40 50","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Tài nguyên Code\\Code-PTIT-K3\\sap_xep_lai_day_con.cpp","group":"local","local":true}

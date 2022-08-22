@@ -10,17 +10,20 @@
 using namespace std;
 const ll MOD=1e9+7;
 
-ll t, n;
-
 int main()
 {   
-    cin >> t;
-    while(t--)
-    {
+    ifstream file1 ("PTIT.in");
+    ofstream file2 ("PTIT.out");
 
+    string s;
+    while(file1 >> s)
+    {
+        file2 << s << '\n';
     }
-    
-    
+
+    file1.close();
+    file2.close();
+     
 	return 0;
 }
  

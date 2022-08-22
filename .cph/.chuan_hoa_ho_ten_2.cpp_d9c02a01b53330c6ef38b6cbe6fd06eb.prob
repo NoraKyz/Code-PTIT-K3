@@ -1,0 +1,1 @@
+{"name":"Local: chuan_hoa_ho_ten_2","url":"f:\\Tài nguyên Code\\Code-PTIT-K3\\chuan_hoa_ho_ten_2.cpp","tests":[{"id":1661172339126,"input":"2\n1\nNguyeN    vAn    Nam\n2\nhoAng  le Nhat THONG chi","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Tài nguyên Code\\Code-PTIT-K3\\chuan_hoa_ho_ten_2.cpp","group":"local","local":true}
