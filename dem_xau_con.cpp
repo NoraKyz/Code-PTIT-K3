@@ -13,23 +13,27 @@ const ll MOD=1e9+7;
 ll t, k;
 string s;
 
-bool Check(string s)
-{
-    set<char> st;
-    for(auto x : s) st.insert(x);
-    if(st.size() != k) return 0;
-    return 1;
-}
-
 ll Logic(string s)
 {
     ll n = s.size() - 1, res = 0;
+
     FOR(i,0,n,1) 
     {
+        char a[500] = {0}, c = 1;
+        string tmp = s.substr(i, 1);
+        a[s[i]]++;
+
+        if(c == k) res++;
+        else if(c > k) break;
+
         FOR(j,i+1,n,1) 
         {
-            string tmp = s.substr(i, j - i + 1);
-            if(Check(tmp)) res++;
+            tmp += s[j];
+            if(a[s[j]] == 0) c++;
+            a[s[j]]++;
+
+            if(c == k) res++;
+            else if(c > k) break;
         }
     }
     return res;

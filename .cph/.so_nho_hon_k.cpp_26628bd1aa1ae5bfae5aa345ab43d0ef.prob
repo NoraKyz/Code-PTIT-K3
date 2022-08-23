@@ -1,0 +1,1 @@
+{"name":"Local: so_nho_hon_k","url":"f:\\Tài nguyên Code\\Code-PTIT-K3\\so_nho_hon_k.cpp","tests":[{"id":1661264767491,"input":"2\n5  3\n2  1  5  6  3\n7  5\n2  7  9  5  8  7  4","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Tài nguyên Code\\Code-PTIT-K3\\so_nho_hon_k.cpp","group":"local","local":true}

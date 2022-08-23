@@ -10,30 +10,31 @@
 using namespace std;
 const ll MOD=1e9+7;
 
-ll t, x , y, z, n;
-
-ll Logic(ll x, ll y, ll z, ll n)
-{
-    ll res = x*y / __gcd(x, y);
-    res = res*z / __gcd(res, z);
-    if((int) log10(res) + 1 > n) return -1;
-
-    ll i =(ll) (pow(10,n-1) / res) * res;
-    while(1) 
-    {
-        if((int) log10(i) + 1 == n) return i;
-        i+=res;     
-    }
-    return i;
-}
+ll t, n;
+ll a[100001];
 
 int main()
 {   
     cin >> t;
     while(t--)
     {
-        cin >> x >> y >> z >> n;
-        cout << Logic(x,y,z,n) << '\n';
+        cin >> n;
+        FOR(i,1,n,1) cin >> a[i];
+
+        FOR(i,2,n,1) 
+        {
+            if(a[i] != 0 && a[i] == a[i-1]) 
+            {
+                a[i-1] *=2;
+                a[i] = 0;
+            }
+        } 
+
+        ll c = 0;
+
+        FOR(i,1,n,1) if(a[i] != 0) cout << a[i] << " "; else c++;
+        while(c--) cout << "0" << " ";
+        cout << '\n';
     }
     
     

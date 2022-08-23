@@ -10,14 +10,27 @@
 using namespace std;
 const ll MOD=1e9+7;
 
-ll t, n;
+ll t, n, x;
+ll a[100001];
+pair<ll,ll> b[100001];
+
 
 int main()
 {   
     cin >> t;
     while(t--)
     {
+        cin >> n >> x;
+        FOR(i,1,n,1)
+        {
+            cin >> a[i];
+            b[i].first = abs(x-a[i]);
+            b[i].second = i;
+        }
 
+        sort(b+1,b+1+n);
+        FOR(i,1,n,1) cout << a[b[i].second] << " ";
+        cout << '\n';
     }
     
     
