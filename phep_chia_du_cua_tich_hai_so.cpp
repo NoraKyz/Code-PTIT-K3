@@ -10,33 +10,25 @@
 using namespace std;
 const ll MOD=1e9+7;
 
-ll t, n, k, b;
-bool a[100001] = {0};
+ll t, n, a, b, c;
+ll ModuleMul(ll a, ll b)
+{
+    if(b == 0) return 0;
+    
+    ll res = ModuleMul(a,b/2) % c;
+    if(b%2) return (res % c + res % c + a % c) % c;
+    return (res % c + res % c) % c;
+}
 
 int main()
 {   
-    cin >> n >> k >> b;
-    while(b--) 
+    cin >> t;
+    while(t--)
     {
-        cin >> t;
-        a[t] = 1;
+        cin >> a >> b >> c;
+        cout << ModuleMul(a,b) << '\n';
     }
-
-    ll i = 1, j = i + k - 1, res, error = 0;
-    FOR(h,i,j,1) error+= a[h];
-    res = error;
-
-    while(j < n)
-    {
-        error-=a[i];
-        i++;
-        j++;
-        error+=a[j];
-        res = min(res, error);
-    }
-
-    cout << res;
-
+    
     
 	return 0;
 }

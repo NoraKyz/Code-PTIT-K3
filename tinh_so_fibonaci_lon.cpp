@@ -10,33 +10,24 @@
 using namespace std;
 const ll MOD=1e9+7;
 
-ll t, n, k, b;
-bool a[100001] = {0};
+ll t, n;
+ll f[2000] = {0};
 
 int main()
 {   
-    cin >> n >> k >> b;
-    while(b--) 
+    f[1] = 1;
+    FOR(i,2,1000,1) 
     {
-        cin >> t;
-        a[t] = 1;
+        f[i] = (f[i-1]%MOD + f[i-2]%MOD) % MOD;
     }
 
-    ll i = 1, j = i + k - 1, res, error = 0;
-    FOR(h,i,j,1) error+= a[h];
-    res = error;
-
-    while(j < n)
+    cin >> t;
+    while(t--)
     {
-        error-=a[i];
-        i++;
-        j++;
-        error+=a[j];
-        res = min(res, error);
+        cin >> n;
+        cout << f[n] << '\n';
     }
-
-    cout << res;
-
+    
     
 	return 0;
 }

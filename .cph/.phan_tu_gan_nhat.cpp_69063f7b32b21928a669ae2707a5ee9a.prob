@@ -1,0 +1,1 @@
+{"name":"Local: phan_tu_gan_nhat","url":"f:\\Tài nguyên Code\\Code-PTIT-K3\\phan_tu_gan_nhat.cpp","tests":[{"id":1661302877284,"input":"1\n5\n12 15 17 18 19\n2 20","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Tài nguyên Code\\Code-PTIT-K3\\phan_tu_gan_nhat.cpp","group":"local","local":true}

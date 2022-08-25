@@ -1,0 +1,1 @@
+{"name":"Local: sap_xep_theo_chu_so","url":"f:\\Tài nguyên Code\\Code-PTIT-K3\\sap_xep_theo_chu_so.cpp","tests":[{"id":1661269704175,"input":"2\n4\n54  546  548  60\n8\n1  34  3  98  9  76  45  4","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Tài nguyên Code\\Code-PTIT-K3\\sap_xep_theo_chu_so.cpp","group":"local","local":true}

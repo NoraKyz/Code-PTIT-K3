@@ -1,0 +1,1 @@
+{"name":"Local: khoang_cach_bang_x","url":"f:\\Tài nguyên Code\\Code-PTIT-K3\\khoang_cach_bang_x.cpp","tests":[{"id":1661300027886,"input":"2\n6 78\n5 20 3 2 5 80\n5 45\n90 70 20 80 50","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Tài nguyên Code\\Code-PTIT-K3\\khoang_cach_bang_x.cpp","group":"local","local":true}

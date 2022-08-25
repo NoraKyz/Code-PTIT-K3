@@ -10,33 +10,21 @@
 using namespace std;
 const ll MOD=1e9+7;
 
-ll t, n, k, b;
-bool a[100001] = {0};
+ll t, n;
+ll a[100001];
 
 int main()
 {   
-    cin >> n >> k >> b;
-    while(b--) 
+    cin >> t;
+    while(t--)
     {
-        cin >> t;
-        a[t] = 1;
+        cin >> n;
+        FOR(i,1,n,1) cin >> a[i];
+        cout << a[1] * a[2] << " ";
+        FOR(i,2,n-1,1) cout << a[i-1] * a[i+1] << " ";
+        cout << a[n] * a[n-1] << '\n';
     }
-
-    ll i = 1, j = i + k - 1, res, error = 0;
-    FOR(h,i,j,1) error+= a[h];
-    res = error;
-
-    while(j < n)
-    {
-        error-=a[i];
-        i++;
-        j++;
-        error+=a[j];
-        res = min(res, error);
-    }
-
-    cout << res;
-
+    
     
 	return 0;
 }
