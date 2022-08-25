@@ -10,7 +10,7 @@
 using namespace std;
 const ll MOD=1e9+7;
 
-ll t, n, m;
+ll t, n, m, ind;
 ll a[150][150] = {0};
 
 int main()
@@ -21,7 +21,7 @@ int main()
         vector<ll> v;
         deque<pair<ll,ll>> d = {{0,1}, {1,0}, {0,-1}, {-1,0}};
         ll res[150][150] = {0};
-        cin >> n >> m;
+        cin >> n >> m >> ind;
         FOR(i,1,n,1)
         {
             FOR(j,1,m,1) 
@@ -51,10 +51,7 @@ int main()
             }
         }
 
-        ll lenV = v.size();
-        FORD(i,lenV-1,0,1) cout << v[i] << " ";
-
-        cout << '\n';
+        cout << v[ind-1] << '\n';
     }    
     
 	return 0;
