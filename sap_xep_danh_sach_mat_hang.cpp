@@ -10,14 +10,39 @@
 using namespace std;
 const ll MOD=1e9+7;
 
-ll t, n;
+ll n;
+
+struct Product
+{
+    ll id;
+    string name, group;
+    double sell, buy;
+};
+
+bool ss(Product A, Product B)
+{
+    return (A.sell - A.buy > B.sell - B.buy);
+}
+
+Product a[10000];
 
 int main()
 {   
-    cin >> t;
-    while(t--)
+    cin >> n;  
+    FOR(i,1,n,1) 
     {
+        a[i].id = i;
+        cin.ignore();
+        getline(cin, a[i].name);
+        getline(cin, a[i].group);
+        cin >> a[i].buy >> a[i].sell;
+    }
 
+    sort(a+1,a+1+n,ss);
+    FOR(i,1,n,1) 
+    {
+        cout << a[i].id << " " << a[i].name << " " << a[i].group << " ";
+        cout << fixed << setprecision(2) << a[i].sell - a[i].buy << '\n';
     }
     
     
