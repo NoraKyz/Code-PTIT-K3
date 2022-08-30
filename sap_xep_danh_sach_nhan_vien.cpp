@@ -44,12 +44,10 @@ bool ss(NhanVien A, NhanVien B)
 {
     // dd/mm/yyyy
     string a = A.birth.substr(6,4), b = B.birth.substr(6,4);
-    return (a < b);
-    a = A.birth.substr(0,2);
-    b = B.birth.substr(0,2);
-    return (a < b);
-    a = A.birth.substr(3,2);
-    b = B.birth.substr(3,2);
+    a += A.birth.substr(0,2);
+    b += B.birth.substr(0,2);
+    a += A.birth.substr(3,2);
+    b += B.birth.substr(3,2);
     return (a < b);
     
 }
