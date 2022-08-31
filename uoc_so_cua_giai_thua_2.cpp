@@ -10,14 +10,27 @@
 using namespace std;
 const ll MOD=1e9+7;
 
-ll t, n;
+ll t, n, p;
+
+ll Logic(ll n, ll p)
+{
+    ll res = 0;
+    while(n > 0)
+    {
+        res += n/p;
+        n/=p;
+    }
+
+    return res;
+}
 
 int main()
 {   
     cin >> t;
     while(t--)
     {
-
+        cin >> n >> p;
+        cout << Logic(n,p) << '\n';
     }
     
     

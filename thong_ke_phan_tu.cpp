@@ -11,13 +11,21 @@ using namespace std;
 const ll MOD=1e9+7;
 
 ll t, n;
+unordered_map<ll,ll> m;
+vector<ll> v;
 
 int main()
 {   
-    cin >> t;
-    while(t--)
+    while(cin >> n)
     {
+        m[n]++;
+        v.push_back(n);
+    }
 
+    for(auto it : v) if(m[it]) 
+    {
+        cout << it << " " << m[it] << '\n';
+        m[it] = 0;
     }
     
     
