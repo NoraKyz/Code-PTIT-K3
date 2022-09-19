@@ -10,24 +10,23 @@
 using namespace std;
 const ll MOD=1e9+7;
 
-ll t, n, k, res = 0;
-pair<ll,ll> x[] = {{1,0}, {0,1}};
-ll sum[25][25] = {0}, a[25][25];
+ll t, n, m, res = 0;
+pair<ll,ll> x[] = {{-1,-1}, {-1,0}, {-1,1}, {0,-1}, {0,1}, {1,-1}, {1,0}, {1,1}};
+bool a[105][105] = {0}, kt[105][105];
 
 void DFS(ll i, ll j)
 {
-    FOR(h,0,1,1)
+    FOR(h,0,7,1)
     {
-        if(i + x[h].first <= n && j + x[h].second <= n)
-        {
-            ll tmp1 = i + x[h].first, tmp2 = j + x[h].second;
-            sum[tmp1][tmp2] = sum[i][j] + a[tmp1][tmp2]; 
+        ll c = i + x[h].first, d = j + x[h].second;
 
-            if(tmp1 == n && tmp2 == n)
+        if(c <= n && d <= m && c >= 1 && d >= 1)
+        {
+            if(a[c][d])
             {
-                if(sum[n][n] == k) res++;
-            }
-            else if ((i < n || j < n) && sum[tmp1][tmp2] <= k) DFS(tmp1,tmp2);          
+                a[c][d] = 0;
+                DFS(c,d);
+            }         
         }
     }
 }
@@ -38,17 +37,23 @@ int main()
     while(t--)
     {
         res = 0;
-        cin >> n >> k;
+        cin >> n >> m;
         FOR(i,1,n,1) 
         {
-            FOR(j,1,n,1) 
+            FOR(j,1,m,1) 
             {
                 cin >> a[i][j];
             }
         }
-        
-        sum[1][1] = a[1][1];
-        DFS(1,1);
+
+        FOR(i,1,n,1)
+        {
+            FOR(j,1,m,1) if(a[i][j]) 
+            {
+                res++;
+                DFS(i,j);
+            }
+        }
 
         cout << res << '\n';
     }

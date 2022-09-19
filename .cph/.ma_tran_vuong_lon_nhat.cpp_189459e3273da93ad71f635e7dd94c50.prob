@@ -1,0 +1,1 @@
+{"name":"Local: ma_tran_vuong_lon_nhat","url":"f:\\SourceCode\\Code-PTIT-K3\\ma_tran_vuong_lon_nhat.cpp","tests":[{"id":1662553896447,"input":"2\n2\nX X\nX X\n4\nX X X O\nX O X X\nX X X O\nX O X X","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\SourceCode\\Code-PTIT-K3\\ma_tran_vuong_lon_nhat.cpp","group":"local","local":true}

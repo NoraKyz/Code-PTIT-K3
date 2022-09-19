@@ -11,13 +11,31 @@ using namespace std;
 const ll MOD=1e9+7;
 
 ll t, n;
+ll a[1000001];
 
 int main()
 {   
     cin >> t;
     while(t--)
-    {
+    {   
+        set<ll> st;
+        cin >> n;
+        FOR(i,1,n,1) 
+        {
+            cin >> a[i];
+            st.insert(a[i]);
+        }
+        
+        FOR(i,1,n,1) 
+        {
+            auto it = st.upper_bound(a[i]);
+            if(it != st.end()) cout << *it;
+            else cout << '_';
 
+            cout << " ";
+        }
+
+        cout << '\n';
     }
     
     

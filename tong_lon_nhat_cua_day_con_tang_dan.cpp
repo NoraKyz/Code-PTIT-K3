@@ -11,12 +11,31 @@ using namespace std;
 const ll MOD=1e9+7;
 
 ll t, n;
+ll a[1005];
 
 int main()
 {   
     cin >> t;
     while(t--)
     {
+        cin >> n;
+        ll dp[n+1] = {0}, res = 0;
+
+        FOR(i,1,n,1) 
+        {
+            cin >> a[i];
+            dp[i] = a[i];
+        }
+
+        FOR(i,1,n,1) 
+        {
+            FORD(j,i-1,1,1) 
+            {
+                if(a[i] > a[j]) dp[i] = max(dp[i], dp[j] + a[i]);
+            }
+        }
+
+        cout << *max_element(dp+1,dp+1+n) << '\n';
 
     }
     
