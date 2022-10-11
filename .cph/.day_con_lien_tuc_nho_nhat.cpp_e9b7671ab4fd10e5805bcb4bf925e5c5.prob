@@ -1,0 +1,1 @@
+{"name":"Local: day_con_lien_tuc_nho_nhat","url":"f:\\Source Code\\Code-PTIT-K3\\day_con_lien_tuc_nho_nhat.cpp","tests":[{"id":1664930831280,"input":"2\n6 51\n1 4 45 7 0 0\n3 8\n1 2 4","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Source Code\\Code-PTIT-K3\\day_con_lien_tuc_nho_nhat.cpp","group":"local","local":true}

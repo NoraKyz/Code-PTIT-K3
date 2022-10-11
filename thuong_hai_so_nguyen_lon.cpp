@@ -12,6 +12,15 @@ const ll MOD=1e9+7;
 
 ll t, n;
 string a, b;
+
+bool ss(string a, string b)
+{
+    ll lena = a.size(), lenb = b.size();
+    if(lena == lenb) return a >= b;
+
+    return lena >= lenb;
+}
+
 string Sub(string a, string b)
 {
     while(a.size() < b.size()) a = "0" + a;
@@ -35,11 +44,49 @@ string Sub(string a, string b)
             res += a[i] - b[i] - nho + '0';
             nho = 0;
         }   
-    } 
+    }
 
     reverse(all(res));
 
-    
+    ll x = 0;
+    while(res[x] == '0') x++;
+    res.erase(res.begin(), res.begin()+x);
+
+    return res;
+}
+
+string Div(string a, string b)
+{
+    string tmp = "", res = "";
+
+    for(char it : a)
+    {
+        tmp+= it;
+
+        ll x = 0;
+        while(tmp[x] == '0') x++;
+        tmp.erase(tmp.begin(), tmp.begin()+x);
+
+        if(ss(tmp,b)) 
+        {
+            //cout << tmp;
+            ll cnt = 0;
+            while(ss(tmp,b)) 
+            {
+                tmp = Sub(tmp,b);
+                cnt++;
+            }
+            //cout << " " << cnt << '\n';
+            res += to_string(cnt);       
+        }
+        else res += "0";
+    }
+
+    ll x = 0;
+    while(res[x] == '0') x++;
+    res.erase(res.begin(), res.begin()+x);
+
+    if(res == "") return "0";
 
     return res;
 }
@@ -50,7 +97,7 @@ int main()
     while(t--)
     {
         cin >> a >> b;
-        cout << Sub(a,b) << '\n';
+        cout << Div(a,b) << '\n';
     }
     
     
