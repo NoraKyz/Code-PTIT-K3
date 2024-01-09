@@ -1,1 +1,0 @@
-{"name":"Local: cau_truc_sinh_vien_fake","url":"f:\\Tài nguyên Code\\Code-PTIT-K3\\cau_truc_sinh_vien_fake.cpp","tests":[{"id":1660997498617,"input":"Nguyen Van A\nD20CQCN01-N\n2/2/2000\n2.5","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Tài nguyên Code\\Code-PTIT-K3\\cau_truc_sinh_vien_fake.cpp","group":"local","local":true}

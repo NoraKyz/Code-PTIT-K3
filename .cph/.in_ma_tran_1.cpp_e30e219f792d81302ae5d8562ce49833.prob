@@ -1,1 +1,0 @@
-{"name":"Local: in_ma_tran_1","url":"f:\\Tài nguyên Code\\Code-PTIT-K3\\in_ma_tran_1.cpp","tests":[{"id":1660956568890,"input":"2\n3\n45 48 54 21 89 87 70 78 15\n2\n25 27 23 21","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Tài nguyên Code\\Code-PTIT-K3\\in_ma_tran_1.cpp","group":"local","local":true}

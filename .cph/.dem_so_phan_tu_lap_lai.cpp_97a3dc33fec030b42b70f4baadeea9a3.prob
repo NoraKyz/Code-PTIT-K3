@@ -1,1 +1,0 @@
-{"name":"Local: dem_so_phan_tu_lap_lai","url":"f:\\Code-PTIT-K3\\dem_so_phan_tu_lap_lai.cpp","tests":[{"id":1660735172764,"input":"2\n5\n4 5 1 2 1\n6\n10 20 30 30 20 5","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Code-PTIT-K3\\dem_so_phan_tu_lap_lai.cpp","group":"local","local":true}

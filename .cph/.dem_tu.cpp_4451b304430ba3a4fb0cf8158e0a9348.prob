@@ -1,1 +1,0 @@
-{"name":"Local: dem_tu","url":"f:\\Code-PTIT-K3\\dem_tu.cpp","tests":[{"id":1660732108919,"input":"2\nPrint the number of words\nPrint the number of words present in the string","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Code-PTIT-K3\\dem_tu.cpp","group":"local","local":true}

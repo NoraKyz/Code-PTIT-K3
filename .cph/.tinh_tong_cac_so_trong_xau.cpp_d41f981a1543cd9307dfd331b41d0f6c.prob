@@ -1,1 +1,0 @@
-{"name":"Local: tinh_tong_cac_so_trong_xau","url":"f:\\Tài nguyên Code\\Code-PTIT-K3\\tinh_tong_cac_so_trong_xau.cpp","tests":[{"id":1661165097042,"input":"4\n1abc23\ngeeks4geeks\n1abc2x30yz67\n123abc","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Tài nguyên Code\\Code-PTIT-K3\\tinh_tong_cac_so_trong_xau.cpp","group":"local","local":true}

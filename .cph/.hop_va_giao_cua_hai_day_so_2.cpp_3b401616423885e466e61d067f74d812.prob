@@ -1,1 +1,0 @@
-{"name":"Local: hop_va_giao_cua_hai_day_so_2","url":"f:\\Tài nguyên Code\\Code-PTIT-K3\\hop_va_giao_cua_hai_day_so_2.cpp","tests":[{"id":1661264164208,"input":"1\n6 5\n7  1  5  2  3  6\n3  8  6  20  7","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Tài nguyên Code\\Code-PTIT-K3\\hop_va_giao_cua_hai_day_so_2.cpp","group":"local","local":true}

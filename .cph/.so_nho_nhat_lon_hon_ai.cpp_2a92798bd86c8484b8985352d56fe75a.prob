@@ -1,1 +1,0 @@
-{"name":"Local: so_nho_nhat_lon_hon_ai","url":"f:\\SourceCode\\Code-PTIT-K3\\so_nho_nhat_lon_hon_ai.cpp","tests":[{"id":1663578533353,"input":"2\n9\n6 3 9 8 10 2 1 15 7\n4\n13 6 7 12","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\SourceCode\\Code-PTIT-K3\\so_nho_nhat_lon_hon_ai.cpp","group":"local","local":true}

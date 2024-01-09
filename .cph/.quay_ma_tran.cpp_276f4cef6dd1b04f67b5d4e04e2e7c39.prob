@@ -1,1 +1,0 @@
-{"name":"Local: quay_ma_tran","url":"f:\\Tài nguyên Code\\Code-PTIT-K3\\quay_ma_tran.cpp","tests":[{"id":1661238932262,"input":"1\n4 4\n1 2 3 4 \n5 6 7 8 \n9 10 11 12 \n13 14 15 16","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Tài nguyên Code\\Code-PTIT-K3\\quay_ma_tran.cpp","group":"local","local":true}
